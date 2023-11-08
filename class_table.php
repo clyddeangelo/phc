@@ -69,7 +69,7 @@ class PHCT {
 
     function console_table() { 
 
-        $signature = "by c_codes";
+        $signature = "by clydde";
         $longest_lengths = array();
         $columns = array_keys($this->table[0]);
         self::longest_lengths($this->table, $longest_lengths); 
@@ -99,11 +99,9 @@ class PHCT {
 
     To print a table in the console
     
-    1. Initialize as PHCT object.
-        $PHCObj = new PHCT();
-    2. Set a table in the PHCT object using
-        $PHCObj->set($arrayHere);
-    3. To print the table call console_table().
+    1. Initialize a PHCT object.
+        $PHCObj = new PHCT($table);
+    2. To print the table call console_table().
         $PHCObj->console_table();
     
     This is a sample run from c_codes' computer:
