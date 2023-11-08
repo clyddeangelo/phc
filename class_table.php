@@ -7,7 +7,7 @@ class PHCT {
         return $this->table;
     }
 
-    function __construct($table = []) {
+    function __construct($table = [[]]) {
         $this->table = $table;
     }
     
