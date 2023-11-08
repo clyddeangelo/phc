@@ -7,6 +7,11 @@ class PHCT {
         return $this->table;
     }
 
+    function __construct($table = NULL) {
+        $this->table = $table;
+    }
+    
+
     function set($array) {
         $this->table = $array;
     }
@@ -63,6 +68,9 @@ class PHCT {
     }
 
     function console_table() { 
+
+        if($this->table === NULL)
+            throw Exception("No table detected.");
 
         $signature = "by c_codes";
         $longest_lengths = array();
