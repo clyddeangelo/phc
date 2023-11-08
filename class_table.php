@@ -1,5 +1,5 @@
 <?php
-class PHC {
+class PHCT {
 
     private array $table;
 
@@ -68,7 +68,7 @@ class PHC {
         $longest_lengths = array();
         $columns = array_keys($this->table[0]);
         self::longest_lengths($this->table, $longest_lengths); 
-        // the longest lengths for each columns, are stores in the 'reference variable $longest_lengths'
+        // the longest lengths for each columns, are stored in the 'reference variable $longest_lengths'
         $table_width = array_sum($longest_lengths);
         // These are the functions that deal with the headers
         echo self::header_decoration($columns, $longest_lengths);
@@ -90,21 +90,13 @@ class PHC {
 
 };
 
-function get_sample_data($db) {
-    $query = "CALL udepts()";
-    $stmt = $db->query($query);
-    $rs = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();
-    return $rs;
-}
-
 /*
 
     To print a table in the console
     
-    1. Initialize as PHC object.
-        $PHCObj = new PHC();
-    2. Set a table in the PHC object using
+    1. Initialize as PHCT object.
+        $PHCObj = new PHCT();
+    2. Set a table in the PHCT object using
         $PHCObj->set($arrayHere);
     3. To print the table call console_table().
         $PHCObj->console_table();
@@ -119,7 +111,7 @@ function get_sample_data($db) {
     |    4|             Department of Arts|       7|    3|
     |    5| Department of Computer Science|       4|    3|
     ------------------------------------------------------
-                                                by c_codes
+                                                 by clydde
     Any bugs? send mail here: clyddeangelocorpuz@gmail.com
 
 
